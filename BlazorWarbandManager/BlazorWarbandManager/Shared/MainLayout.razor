@@ -1,0 +1,13 @@
+﻿@inherits LayoutComponentBase
+
+<div class="d-flex flex-column h-100">
+    <NavMenu />
+    <div class="container-fluid flex-grow-1">
+        <CascadingValue Value="this">
+            <div class="pt-3">
+                @Body
+            </div>
+        </CascadingValue>
+    </div>
+</div>
+
