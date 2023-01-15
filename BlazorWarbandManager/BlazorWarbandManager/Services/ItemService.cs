@@ -1,29 +1,23 @@
+using System.Net.Http.Json;
 using System.Text.Json;
 using BlazorWarbandManager.Models;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 namespace BlazorWarbandManager.Services
 {
-    public class ItemService
+    public class ItemService : IItemService
     {
-        private readonly string _jsonFilePath;
-        private List<Item> _items;
+        private readonly HttpClient httpClient;
 
-        public ItemService(string jsonFilepath)
+        public ItemService(HttpClient httpClient)
         {
-            _jsonFilePath = jsonFilepath;
+            this.httpClient = httpClient;
         }
 
-        public IEnumerable<Item> GetItems()
+        public async Task<List<Item>?> GetItemsAsync(string uri)
         {
-            if (_items != null)
-            {
-                return _items;
-            }
-
-            string jsonString = File.ReadAllText(_jsonFilePath);
-            _items = JsonSerializer.Deserialize<List<Item>>(jsonString);
-
-            return _items.Count > 0 ? _items : null;
+            var jsonString =  await httpClient.GetStringAsync(uri);
+            return JsonSerializer.Deserialize<List<Item>>(jsonString);
         }
     }
 }
