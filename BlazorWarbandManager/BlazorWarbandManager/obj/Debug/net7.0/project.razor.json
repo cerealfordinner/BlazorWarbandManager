@@ -223,39 +223,6 @@
         }
       },
       {
-        "HashCode": -1050749904,
-        "Kind": "Components.Component",
-        "Name": "BlazorWarbandManager.Pages.Warbands",
-        "AssemblyName": "BlazorWarbandManager",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Warbands"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWarbandManager.Pages.Warbands"
-        }
-      },
-      {
-        "HashCode": -744986684,
-        "Kind": "Components.Component",
-        "Name": "BlazorWarbandManager.Pages.Warbands",
-        "AssemblyName": "BlazorWarbandManager",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWarbandManager.Pages.Warbands"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWarbandManager.Pages.Warbands",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1850528422,
         "Kind": "Components.Component",
         "Name": "BlazorWarbandManager.Pages.Items",
@@ -285,6 +252,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWarbandManager.Pages.Items",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1050749904,
+        "Kind": "Components.Component",
+        "Name": "BlazorWarbandManager.Pages.Warbands",
+        "AssemblyName": "BlazorWarbandManager",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Warbands"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWarbandManager.Pages.Warbands"
+        }
+      },
+      {
+        "HashCode": -744986684,
+        "Kind": "Components.Component",
+        "Name": "BlazorWarbandManager.Pages.Warbands",
+        "AssemblyName": "BlazorWarbandManager",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWarbandManager.Pages.Warbands"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWarbandManager.Pages.Warbands",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

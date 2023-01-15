@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k0efOS4x1f8a24VLH+l5GyaD7da940QGG6jt1L6/Rvs=",
+  "Hash": "cVtwQgAXDxUi9T4SRzagWxPiuj/WU55qUAM1A2cJtFw=",
   "Source": "BlazorWarbandManager",
   "BasePath": "/",
   "Mode": "Root",
@@ -7121,6 +7121,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\cerealfordinner\\code\\repos\\BlazorWarbandManager\\BlazorWarbandManager\\BlazorWarbandManager\\wwwroot\\items.json",
+      "SourceId": "BlazorWarbandManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cerealfordinner\\code\\repos\\BlazorWarbandManager\\BlazorWarbandManager\\BlazorWarbandManager\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "items.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\items.json"
     }
   ]
 }

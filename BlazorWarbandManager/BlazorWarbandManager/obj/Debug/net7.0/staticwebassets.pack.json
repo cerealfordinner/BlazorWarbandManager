@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\cerealfordinner\\code\\repos\\BlazorWarbandManager\\BlazorWarbandManager\\BlazorWarbandManager\\wwwroot\\items.json",
+      "PackagePath": "staticwebassets\\items.json"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorWarbandManager.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

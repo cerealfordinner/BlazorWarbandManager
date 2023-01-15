@@ -823,3 +823,4 @@ C:\Users\cerealfordinner\code\repos\BlazorWarbandManager\BlazorWarbandManager\Bl
 C:\Users\cerealfordinner\code\repos\BlazorWarbandManager\BlazorWarbandManager\BlazorWarbandManager\obj\Debug\net7.0\refint\BlazorWarbandManager.dll
 C:\Users\cerealfordinner\code\repos\BlazorWarbandManager\BlazorWarbandManager\BlazorWarbandManager\obj\Debug\net7.0\BlazorWarbandManager.pdb
 C:\Users\cerealfordinner\code\repos\BlazorWarbandManager\BlazorWarbandManager\BlazorWarbandManager\obj\Debug\net7.0\ref\BlazorWarbandManager.dll
+C:\Users\cerealfordinner\code\repos\BlazorWarbandManager\BlazorWarbandManager\BlazorWarbandManager\bin\Debug\net7.0\Data\items.json
