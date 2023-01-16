@@ -1,24 +1,8 @@
-﻿<div class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Warband Builder</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <NavLink class="nav-link" href="warbands">Warbands</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link" href="items">Items</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link" href="abilities">Abilities</NavLink>
-            </li>
-        </ul>
-    </div>
-</div>
-
-@code 
-{
-
-}
+﻿<MudNavMenu>
+    <MudNavLink Href="/" Match="NavLinkMatch.All">Warband</MudNavLink>
+    <MudNavGroup Title="Items" Expanded="false">
+        <MudNavLink Href="/weapons"  Match="NavLinkMatch.Prefix">Weapons</MudNavLink>
+        <MudNavLink Href="/armor"  Match="NavLinkMatch.Prefix">Armor</MudNavLink>
+        <MudNavLink Href="/consumables"  Match="NavLinkMatch.Prefix">Consumables</MudNavLink>
+    </MudNavGroup>
+</MudNavMenu>

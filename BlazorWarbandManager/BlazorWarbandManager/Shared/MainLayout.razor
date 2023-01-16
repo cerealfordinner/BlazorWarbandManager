@@ -1,13 +1,47 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="d-flex flex-column h-100">
-    <NavMenu />
-    <div class="container-fluid flex-grow-1">
-        <CascadingValue Value="this">
-            <div class="pt-3">
-                @Body
-            </div>
-        </CascadingValue>
-    </div>
-</div>
+<MudThemeProvider Theme="CustomTheme" IsDarkMode="true"/>
 
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Dark" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Dark" Edge="Edge.End" />
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h5" Class="mt-1">Warband Manager</MudText>
+        </MudDrawerHeader>
+        <NavMenu/>
+    </MudDrawer>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Medium">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+@code {
+    bool _drawerOpen = true;
+
+    MudTheme CustomTheme= new MudTheme()
+    {
+        PaletteDark = new PaletteDark()
+        {
+            Primary = Colors.Blue.Lighten1
+        },
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidthLeft = "260px",
+            DrawerMiniWidthRight = "300px"
+        }
+    };
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
