@@ -1,9 +1,30 @@
 ﻿@page "/"
+@using BlazorWarbandManager.Models.Enums
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Warband Manager</PageTitle>
 
-<h1>Hello, world!</h1>
+<MudForm>
+    <MudTextField Label="Warband Name" @bind-Value="_warband.Name" Required="true"/>
+    <MudSelect T="string" Label="Game System" @bind-Value="_warband.GameSystem">
+        @foreach(var system in Models.Constants.GameSystems)
+        {
+            <MudSelectItem Value="@system" />
+        }
+    </MudSelect>
+    <MudButton Color="Color.Secondary" OnClick="@HandleWarbandCreated">Submit</MudButton>
+</MudForm>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+<MudContainer>
+    @if (_warbands.Count > 0)
+    {
+        @foreach (var warband in Warbands)
+        {
+            <WarbandCard DeleteWarbandEventCallback="DeleteWarband" Warband="@warband"/>
+        }
+    }
+    else
+    {
+        <h3>No Warband created yet.</h3>
+    }
+</MudContainer>
