@@ -1,0 +1,35 @@
+<MudCard Class="ma-4">
+    <MudCardHeader>
+        <CardHeaderAvatar>
+            <MudAvatar Color="Color.Secondary">
+                <MudIcon Icon="@Icons.Material.Filled.Groups3"/>
+            </MudAvatar>
+        </CardHeaderAvatar>
+        <CardHeaderContent>
+            <MudText Align="Align.Center" Typo="Typo.h4">@Warband.Name</MudText>
+            <MudText Align="Align.Center" Typo="Typo.subtitle2">@Warband.GameSystem</MudText>
+        </CardHeaderContent>
+        <CardHeaderActions>
+            <MudMenu Icon="@Icons.Material.Filled.Settings">
+                <MudMenuItem OnTouch="() => DeleteWarbandEventCallback.InvokeAsync(Warband)" 
+                             OnClick="() => DeleteWarbandEventCallback.InvokeAsync(Warband)">Delete</MudMenuItem>
+            </MudMenu>
+        </CardHeaderActions>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudText Typo="Typo.body2">Date Created: @DateOnly.FromDateTime(Warband.DateCreated)</MudText>
+    </MudCardContent>
+    <MudCardActions>
+        <MudButton Variant="Variant.Text" Color="Color.Primary">Open</MudButton>
+    </MudCardActions>
+</MudCard>
+
+@code {
+    
+    [Parameter]
+    public Warband Warband { get; set; }
+
+    [Parameter]
+    public EventCallback<Warband> DeleteWarbandEventCallback { get; set; }
+
+}
