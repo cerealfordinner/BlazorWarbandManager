@@ -1,0 +1,10 @@
+@page "/weapons"
+@inject ItemService ItemService
+
+@if (_items is not null)
+{
+    foreach (var item in _items)
+    {
+        <WeaponCard Name="@item.Name" Description="@item.Description" Cost="@item.Cost"/>
+    }
+}

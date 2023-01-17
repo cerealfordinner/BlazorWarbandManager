@@ -1,13 +1,17 @@
-<div class="card" style="width: 18rem;">
-    <div class="card-header">
-        <h3>@Name</h3>
-    </div>
-    <div class="card-body">
-        <b>Description:</b>
-        <p>@Description</p>
-        <p>Cost: @Cost</p>
-    </div>
-</div>
+<MudCard>
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6">@Name</MudText>
+        </CardHeaderContent>
+        <CardHeaderActions>
+            <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Default" />
+        </CardHeaderActions>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudText>@Description</MudText>
+        <MudText Typo="Typo.body2">Cost: @Cost</MudText>
+    </MudCardContent>
+</MudCard>
 
 @code {
     [Parameter]
