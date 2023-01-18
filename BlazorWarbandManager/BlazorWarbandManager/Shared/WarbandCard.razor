@@ -19,8 +19,9 @@
     <MudCardContent>
         <MudText Typo="Typo.body2">Date Created: @DateOnly.FromDateTime(Warband.DateCreated)</MudText>
     </MudCardContent>
-    <MudCardActions>
+    <MudCardActions Class="d-flex flex-grow-1 justify-content-end">
         <MudButton Variant="Variant.Text" Color="Color.Primary">Open</MudButton>
+        <MudText>@DateOnly.FromDateTime(Warband.DateCreated)</MudText>
     </MudCardActions>
 </MudCard>
 
