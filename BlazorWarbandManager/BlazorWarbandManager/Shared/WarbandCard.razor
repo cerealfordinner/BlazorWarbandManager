@@ -1,3 +1,4 @@
+@inject NavigationManager UriHelper
 <MudCard Class="ma-4">
     <MudCardHeader>
         <CardHeaderAvatar>
@@ -20,17 +21,20 @@
         <MudText Typo="Typo.body2">Date Created: @DateOnly.FromDateTime(Warband.DateCreated)</MudText>
     </MudCardContent>
     <MudCardActions Class="d-flex flex-grow-1 justify-content-end">
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Open</MudButton>
-        <MudText>@DateOnly.FromDateTime(Warband.DateCreated)</MudText>
+        <MudButton OnClick="ViewWarband" Variant="Variant.Text" Color="Color.Primary">View</MudButton>
     </MudCardActions>
 </MudCard>
 
 @code {
     
-    [Parameter]
-    public Warband Warband { get; set; }
+    [Parameter] public Warband Warband { get; set; }
 
     [Parameter]
     public EventCallback<Warband> DeleteWarbandEventCallback { get; set; }
+
+    private void ViewWarband()
+    {
+        UriHelper.NavigateTo($"warband/view/{Warband}");
+    }
 
 }
