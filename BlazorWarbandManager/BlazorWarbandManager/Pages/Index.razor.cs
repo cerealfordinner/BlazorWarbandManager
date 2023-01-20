@@ -1,5 +1,4 @@
 using BlazorWarbandManager.Models;
-using BlazorWarbandManager.Models.Enums;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorWarbandManager.Pages;
@@ -8,9 +7,7 @@ public partial class Index
 {
     private Warband _warband = new();
     private List<Warband> _warbands = new();
-
-    [Parameter]
-    public List<Warband> Warbands
+    [Parameter] public List<Warband> Warbands
     {
         get => _warbands;
         set
@@ -25,17 +22,24 @@ public partial class Index
         await localStorage.SetItemAsync("warbands", _warbands);
     }
 
-    private async Task HandleWarbandCreated()
+    private Task HandleWarbandCreated()
     {
         _warband.DateCreated = DateTime.Today;
+        _warband.Id = Guid.NewGuid();
         _warbands.Add(_warband);
         Warbands = _warbands;
+        _warband = new Warband();
+        return Task.CompletedTask;
     }
 
     public void DeleteWarband(Warband warband)
     {
         _warbands.Remove(warband);
         Warbands = _warbands;
+    }
+
+    private void ViewWarband(Warband warband)
+    {
     }
 
     protected override async Task OnInitializedAsync()

@@ -4,6 +4,7 @@ namespace BlazorWarbandManager.Models;
 
 public class Warband
 {
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string GameSystem { get; set; }
     public DateTime DateCreated { get; set; }
