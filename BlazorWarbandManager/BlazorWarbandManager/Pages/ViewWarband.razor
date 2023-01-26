@@ -1,3 +1,11 @@
-@page "/warband/view/{warband}"
+@page "/view/{warbandId}"
 
-<MudText>@Warband.Name</MudText>
+@if (Warband != null)
+{
+    <MudText>@Warband.Id</MudText>
+    <MudText>@Warband.Name</MudText>
+}
+else
+{
+    <MudText>No Warband found in local storage</MudText>
+}
