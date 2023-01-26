@@ -1,4 +1,3 @@
-@inject NavigationManager UriHelper
 <MudCard Class="ma-4">
     <MudCardHeader>
         <CardHeaderAvatar>
@@ -28,13 +27,12 @@
 @code {
     
     [Parameter] public Warband Warband { get; set; }
-
-    [Parameter]
-    public EventCallback<Warband> DeleteWarbandEventCallback { get; set; }
+    [Parameter] public EventCallback<Warband> DeleteWarbandEventCallback { get; set; }
+    [Inject] private NavigationManager UriHelper { get; set; }
 
     private void ViewWarband()
     {
-        UriHelper.NavigateTo($"warband/view/{Warband}");
+        UriHelper.NavigateTo($"/view/{Warband.Id}");
     }
 
 }
