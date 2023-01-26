@@ -1,10 +1,11 @@
 using BlazorWarbandManager.Models;
 using Microsoft.AspNetCore.Components;
-
 namespace BlazorWarbandManager.Pages;
 
 public partial class Index
 {
+    [Inject] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
+    [Inject] private NavigationManager UriHealper { get; set; }
     private Warband _warband = new();
     private List<Warband> _warbands = new();
     [Parameter] public List<Warband> Warbands
